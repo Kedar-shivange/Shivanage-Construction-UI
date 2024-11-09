@@ -2,6 +2,7 @@
   "name": "shivanage-construction",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://example.com/shivanage-construction",
   "dependencies": {
     "@swc/helpers": "^0.5.13",
     "@testing-library/jest-dom": "^5.17.0",

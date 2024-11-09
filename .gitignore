@@ -10,6 +10,8 @@ build/
 .env
 .DS_Store
 
+_.vercel.app.crt
+
 
 # testing
 /coverage
