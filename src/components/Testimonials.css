@@ -1,0 +1,136 @@
+.testimonials {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #f9fafb;
+}
+
+.testimonials .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.testimonials h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #4a5568;
+  margin: 0.75rem auto 0;
+  border-radius: 2px;
+}
+
+.testimonials .testimonial-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.testimonials .testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.testimonials .testimonial-image {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 4px solid #e2e8f0;
+}
+
+.testimonials blockquote {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.testimonials .client-info .client-name {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #2d3748;
+}
+
+.testimonials .client-info .client-role {
+  color: #718096;
+  font-size: 1rem;
+}
+
+.testimonials .star-rating {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonials .star-rating .star {
+  font-size: 1.25rem;
+  color: #fbbf24;
+}
+
+/* Optional cursor pointer effect */
+.testimonials .testimonial-card:hover {
+  cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .testimonials h2 {
+    font-size: 1.75rem;
+  }
+
+  .testimonials .testimonial-card {
+    padding: 1.5rem;
+  }
+
+  .testimonials .testimonial-image {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .testimonials blockquote {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials h2 {
+    font-size: 1.5rem;
+  }
+
+  .testimonials .testimonial-card {
+    padding: 1rem;
+  }
+
+  .testimonials .testimonial-image {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .testimonials .client-info .client-name {
+    font-size: 1rem;
+  }
+
+  .testimonials .client-info .client-role {
+    font-size: 0.875rem;
+  }
+
+  .testimonials blockquote {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,64 @@
+.promotional-banner {
+  background: linear-gradient(135deg, #4e73df, #2e59d9); /* Vibrant gradient */
+  color: white;
+  padding: 4rem 2rem; /* Increased padding for spacious design */
+  text-align: center;
+  border-radius: 1rem; /* More rounded corners for modern feel */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+  position: relative; /* Added for possible content positioning */
+}
+
+.promotional-banner:hover {
+  background: linear-gradient(135deg, #2e59d9, #4e73df); /* Reverse gradient on hover */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.promotional-banner h2 {
+  font-size: 2.75rem; /* Slightly larger for greater impact */
+  margin-bottom: 1.25rem; /* Slightly more space below */
+  font-weight: bold;
+  text-transform: uppercase; /* Uppercase for emphasis */
+  letter-spacing: 1px; /* Space between letters for a cleaner look */
+}
+
+.promotional-banner p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem; /* More space between the paragraph and button */
+  max-width: 600px; /* Limit paragraph width for better readability */
+  margin-left: auto;
+  margin-right: auto; /* Center the paragraph */
+}
+
+.promotional-banner button {
+  background-color: #ff6b6b; /* Soft red for the call to action */
+  color: white;
+  padding: 1rem 2.5rem; /* Larger padding for a more prominent button */
+  border: none;
+  border-radius: 30px; /* Rounded button for modern aesthetic */
+  cursor: pointer;
+  font-size: 1.125rem; /* Larger font size for better readability */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.promotional-banner button:hover {
+  background-color: #ff4d4d; /* Darker shade for hover */
+  transform: translateY(-4px); /* Slightly stronger lift effect */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.promotional-banner button:active {
+  transform: translateY(2px); /* Button 'press' effect */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); /* Smaller shadow when clicked */
+}
+
+/* Center content for smaller screens */
+.promotional-banner .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Ensure container takes up full height */
+  text-align: center;
+}

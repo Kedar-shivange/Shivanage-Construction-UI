@@ -1,0 +1,144 @@
+/* HeroSlider.css */
+
+.hero-slider {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+.hero-slider__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(1.1); /* Start with a slightly zoomed effect */
+  transition: opacity 1s ease, transform 1.5s ease; /* Smooth fade and zoom-out effect */
+}
+
+.hero-slider__slide--active {
+  opacity: 1;
+  transform: scale(1); /* Zoom to full size for active slide */
+}
+
+.hero-slider__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7) contrast(1.1); /* Enhanced image contrast */
+  transition: filter 1s ease; /* Smooth filter change */
+}
+
+.hero-slider__image:hover {
+  filter: brightness(1) contrast(1); /* Brighten image on hover */
+}
+
+.hero-slider__content {
+  position: absolute;
+  bottom: 15%; /* Positioned above the bottom */
+  left: 5%;
+  right: 5%;
+  text-align: center;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)); /* Gradient overlay */
+  color: #fff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  animation: fadeInUp 1.2s ease; /* Content animation */
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-slider__title {
+  font-size: 2.5rem; /* Larger title */
+  font-weight: bold;
+  color: #f7fafc; /* Slightly off-white for better contrast */
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); /* Text shadow for depth */
+  margin-bottom: 1rem;
+}
+
+.hero-slider__detail {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #e2e8f0;
+}
+
+.hero-slider__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  padding: 0.8rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Button shadow */
+  cursor: pointer;
+}
+
+.hero-slider__button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: scale(1.1); /* Slight scaling on hover */
+}
+
+.hero-slider__button--left {
+  left: 1.5rem;
+}
+
+.hero-slider__button--right {
+  right: 1.5rem;
+}
+
+/* Slide Button Icons */
+.hero-slider__button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #2d3748; /* Darker icon color */
+}
+
+.hero-slider__button:hover svg {
+  color: #1a202c; /* Darker icon on hover */
+}
+
+/* Animation for slide fade-in and zoom effect */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .hero-slider {
+    height: 400px; /* Smaller height on mobile */
+  }
+
+  .hero-slider__content {
+    padding: 1.5rem;
+  }
+
+  .hero-slider__title {
+    font-size: 1.75rem;
+  }
+
+  .hero-slider__detail {
+    font-size: 1rem;
+  }
+  
+  .hero-slider__button {
+    padding: 0.6rem;
+  }
+}

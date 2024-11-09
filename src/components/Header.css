@@ -1,0 +1,117 @@
+/* Header Styling */
+.header {
+  background-color: rgba(29, 42, 109, 0.9); /* Semi-transparent background */
+  color: #fff;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slight shadow for better separation */
+  backdrop-filter: blur(10px); /* Background blur effect */
+  z-index: 999; /* Ensure header stays on top */
+}
+
+/* Container for header content */
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Branding and logo styling */
+.header__branding {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+/* Logo Styling */
+.header__logo {
+  width: 120px;
+  height: auto;
+  margin-right: 1rem;
+  filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.5)); /* Soft shadow to logo */
+  transition: 
+    transform 0.6s ease-in-out, 
+    filter 0.3s ease, 
+    box-shadow 0.3s ease; /* Extended transform duration for smooth rotation */
+  transform-origin: center; /* Ensures the logo rotates around its center */
+}
+
+.header__logo:hover {
+  transform: rotate(360deg); /* Full rotation around itself */
+  filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.7)); /* Stronger shadow on hover */
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.6); /* Glowing effect on hover */
+  transition: transform 0.6s ease-in-out, 
+    filter 0.3s ease, 
+    box-shadow 0.3s ease;
+}
+
+/* Tagline styling with smooth transitions */
+.header__tagline {
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.header__tagline:hover {
+  color: #63b3ed; /* Change color on hover */
+  transform: translateY(-5px); /* Slight lift effect */
+  letter-spacing: 2px; /* Add spacing effect on hover */
+}
+
+/* Button styling */
+.header__buttons {
+  margin-left: 1rem;
+}
+
+/* Button hover effects */
+.header__button {
+  background-color: #63b3ed;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header__button:hover {
+  background-color: #3e8ed0;
+  transform: translateY(-4px); /* Slight lift effect */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.header__button:focus {
+  outline: 2px solid #ff007f;
+  outline-offset: 4px;
+  animation: focusPulse 0.6s infinite; /* Pulse effect on focus */
+}
+
+/* Keyframe for the button focus pulse */
+@keyframes focusPulse {
+  0% {
+    outline-width: 2px;
+  }
+  50% {
+    outline-width: 4px;
+  }
+  100% {
+    outline-width: 2px;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header__branding {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header__tagline {
+    font-size: 1rem; /* Smaller tagline text on mobile */
+    text-align: center;
+  }
+
+  .header__buttons {
+    margin-top: 1rem;
+  }
+}

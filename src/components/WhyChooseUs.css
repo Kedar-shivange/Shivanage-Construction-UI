@@ -1,0 +1,84 @@
+/* WhyChooseUs.css */
+
+.why-choose-us {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #e6f7ff; /* Light blue background */
+}
+
+.why-choose-us .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.why-choose-us h2 {
+  font-size: 2rem; /* Larger heading */
+  font-weight: 700; /* Bold */
+  color: #2a4365; /* Darker color for heading */
+  margin-bottom: 2.5rem; /* Spacing below heading */
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.why-choose-us h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #4c51bf; /* Accent color line under heading */
+  border-radius: 2px;
+}
+
+.why-choose-us .reason-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem; /* Space between cards */
+}
+
+.why-choose-us .reason-card:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.why-choose-us .reason-icon {
+  margin-bottom: 1rem;
+  font-size: 2.5rem; /* Increase icon size */
+  color: #4c51bf; /* Icon color */
+}
+
+.why-choose-us .reason-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748; /* Dark gray for title */
+  margin-bottom: 0.75rem;
+}
+
+.why-choose-us .reason-description {
+  color: #718096;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+  .why-choose-us .reason-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem; /* Space between cards */
+  }
+}
+
+@media (min-width: 1024px) {
+  .why-choose-us .reason-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

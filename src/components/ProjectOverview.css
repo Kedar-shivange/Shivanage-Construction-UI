@@ -1,0 +1,121 @@
+/* Root container styling */
+.project-overview {
+  padding: 3rem 0;
+  background-color: #edf2f7; /* Subtle light gray background */
+}
+
+.project-overview .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Section title */
+.project-overview h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #2d3748; /* Dark gray */
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Filter controls container */
+.project-overview .filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* Filter buttons and inputs */
+.project-overview .filter-controls select,
+.project-overview .filter-controls input,
+.project-overview .filter-controls button {
+  width: 100%;
+  max-width: 250px;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e0; /* Light border */
+  color: #2d3748;
+  font-size: 0.875rem;
+}
+
+.project-overview .filter-controls button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #3182ce; /* Blue background */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.project-overview .filter-controls button:hover {
+  background-color: #2b6cb0; /* Darker blue on hover */
+}
+
+/* Project grid */
+.project-overview .project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .project-overview .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-overview .project-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Project card */
+.project-overview .project-card {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-overview .project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Elevated shadow on hover */
+}
+
+.project-overview .project-card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.project-overview .project-card-content {
+  padding: 1.5rem;
+}
+
+.project-overview .project-card-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.project-overview .project-card-content p {
+  color: #4a5568; /* Dark gray */
+  margin-bottom: 0.5rem;
+}
+
+.project-overview .project-status-completed {
+  color: #48bb78; /* Green for completed */
+  font-weight: 600;
+}
+
+.project-overview .project-status-ongoing {
+  color: #4299e1; /* Blue for ongoing */
+  font-weight: 600;
+}

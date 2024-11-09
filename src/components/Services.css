@@ -1,0 +1,88 @@
+/* Services.css */
+
+.services-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f7fafc, #e2e8f0); /* Subtle gradient background */
+}
+
+.services-title {
+  font-size: 2.25rem; /* Larger title for emphasis */
+  font-weight: 700;
+  color: #2d3748; /* Darker shade for text */
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+}
+
+.services-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #4a90e2; /* Accent color */
+  margin: 1rem auto 0;
+}
+
+.service-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background-color: #edf2f7; /* Slight background color change on hover */
+}
+
+.service-icon {
+  font-size: 2.5rem; /* Larger icon size for emphasis */
+  color: #4a90e2; /* Primary color for icon */
+  margin-bottom: 1.5rem;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s;
+}
+
+.service-card:hover .service-title {
+  color: #4a90e2; /* Changes color on hover for emphasis */
+}
+
+.service-description {
+  color: #4a5568;
+  line-height: 1.6;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.service-card:hover .service-description {
+  color: #2d3748;
+}
+
+/* Responsive Grid Layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .services-title {
+    font-size: 1.875rem; /* Smaller title size on mobile */
+  }
+  
+  .service-card {
+    padding: 1.5rem;
+  }
+}
