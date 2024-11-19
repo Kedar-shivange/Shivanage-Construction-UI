@@ -13,6 +13,15 @@
   transition: transform 0.3s ease;
 }
 
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #fff; /* or any color for the background */
+  padding: 1rem;
+  z-index: 10; /* Ensures it stays on top of the other content */
+}
+
+
 /* On scroll, change the background color */
 .nav.scrolled {
   background: rgba(20, 30, 48, 1); /* Solid background when scrolled */

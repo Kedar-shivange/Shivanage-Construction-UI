@@ -16,7 +16,7 @@ export default function AboutUs() {
           'div',
           { className: 'about-us-image-wrapper md:w-1/2 mb-8 md:mb-0' },
           React.createElement("img", {
-            src: '/Body images/About Our Construction Company.jpg?height=400&width=600',
+            src: '/Body images/About Our Construction Company.jpg?height=50&width=100',
             alt: 'Construction team',
             className: 'about-us-image'
           })

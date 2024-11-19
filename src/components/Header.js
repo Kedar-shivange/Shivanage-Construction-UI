@@ -18,11 +18,6 @@ export default function Header() {
         <div className="header__tagline">
           <p>Your trusted partner in construction</p>
         </div>
-
-        {/* Optional Buttons */}
-        <div className="header__buttons">
-          <button className="header__button">Contact Us</button>
-        </div>
       </div>
     </header>
   );

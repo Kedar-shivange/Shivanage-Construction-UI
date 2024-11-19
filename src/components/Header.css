@@ -1,11 +1,15 @@
 /* Header Styling */
 .header {
-  background-color: rgba(29, 42, 109, 0.9); /* Semi-transparent background */
-  color: #fff;
-  padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slight shadow for better separation */
-  backdrop-filter: blur(10px); /* Background blur effect */
-  z-index: 999; /* Ensure header stays on top */
+  background-color: #333; /* example background */
+  color: white;
+  padding: 1rem 2rem; /* Reduced padding for a more compact header */
+  z-index: 5; /* Make sure it's below the navigation */
+  position: -ms-page;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
 }
 
 /* Container for header content */
@@ -13,90 +17,86 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Branding and logo styling */
 .header__branding {
   display: flex;
   align-items: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease-in-out;
 }
 
 /* Logo Styling */
 .header__logo {
-  width: 120px;
+  width: 100px; /* Reduced width */
   height: auto;
-  margin-right: 1rem;
-  filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.5)); /* Soft shadow to logo */
+  margin-right: 1rem; /* Reduced margin */
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
   transition: 
     transform 0.6s ease-in-out, 
     filter 0.3s ease, 
-    box-shadow 0.3s ease; /* Extended transform duration for smooth rotation */
-  transform-origin: center; /* Ensures the logo rotates around its center */
-}
-
-.header__logo:hover {
-  transform: rotate(360deg); /* Full rotation around itself */
-  filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.7)); /* Stronger shadow on hover */
-  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.6); /* Glowing effect on hover */
-  transition: transform 0.6s ease-in-out, 
-    filter 0.3s ease, 
     box-shadow 0.3s ease;
+  transform-origin: center;
 }
 
-/* Tagline styling with smooth transitions */
+/* Hover effects on logo */
+.header__logo:hover {
+  transform: rotate(360deg); /* Full rotation */
+  filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.7));
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.6); /* Glowing effect */
+}
+
+/* Tagline styling */
 .header__tagline {
-  font-size: 1.2rem;
-  font-weight: 500;
-  transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease;
+  font-size: 1.1rem; /* Reduced font size */
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin: 0; /* Reduced margin */
 }
 
+/* Hover effect for tagline */
 .header__tagline:hover {
-  color: #63b3ed; /* Change color on hover */
-  transform: translateY(-5px); /* Slight lift effect */
-  letter-spacing: 2px; /* Add spacing effect on hover */
+  color: #63b3ed;
+  transform: translateY(-3px); /* Reduced translate distance */
 }
 
-/* Button styling */
+/* Button Styling */
 .header__buttons {
-  margin-left: 1rem;
+  margin-left: 1rem; /* Reduced margin */
 }
 
-/* Button hover effects */
 .header__button {
   background-color: #63b3ed;
   color: #fff;
   border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
+  padding: 0.5rem 1.2rem; /* Reduced padding */
+  font-size: 1rem; /* Reduced font size */
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 30px;
+  transition: background-color 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover effects for buttons */
 .header__button:hover {
   background-color: #3e8ed0;
-  transform: translateY(-4px); /* Slight lift effect */
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  transform: translateY(-4px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .header__button:focus {
   outline: 2px solid #ff007f;
   outline-offset: 4px;
-  animation: focusPulse 0.6s infinite; /* Pulse effect on focus */
+  animation: focusPulse 0.6s infinite;
 }
 
-/* Keyframe for the button focus pulse */
+/* Keyframe for button pulse effect */
 @keyframes focusPulse {
-  0% {
-    outline-width: 2px;
-  }
-  50% {
-    outline-width: 4px;
-  }
-  100% {
-    outline-width: 2px;
-  }
+  0% { outline-width: 2px; }
+  50% { outline-width: 4px; }
+  100% { outline-width: 2px; }
 }
 
 /* Responsive adjustments */
@@ -107,11 +107,11 @@
   }
 
   .header__tagline {
-    font-size: 1rem; /* Smaller tagline text on mobile */
+    font-size: 1rem; /* Adjusted for smaller screens */
     text-align: center;
   }
 
   .header__buttons {
-    margin-top: 1rem;
+    margin-top: 1rem; /* Reduced space between buttons */
   }
 }

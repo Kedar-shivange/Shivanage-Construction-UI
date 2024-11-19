@@ -1,4 +1,3 @@
-// App.js
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Preloader from './components/Preloader';
@@ -16,10 +15,11 @@ import PartnerBrands from './components/PartnerBrands';
 import Blog from './components/Blog';
 import Footer from './components/Footer';
 import Gallery from './components/Gallery'; // Import Gallery component
-import Contact from './pages/Contact'; // Correct import path
-import './components/Styles/Style.css';
 
-export default function App() {
+import './App.css';
+
+
+function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -28,34 +28,34 @@ export default function App() {
   }, []);
 
   if (loading) {
-    return <Preloader />;
+    return (
+      <div className="fixed inset-0 flex items-center justify-center bg-gray-900 z-50">
+        <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-blue-600"></div>
+      </div>
+    );
   }
 
   return (
-    <Router>
-      <div className="flex flex-col min-h-screen">
-        <Header />
-        <Navigation />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<HeroSlider />} />
-            <Route path="/about" element={<AboutUs />} />
-            <Route path="/projects" element={<ProjectOverview />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/testimonials" element={<Testimonials />} />
-            <Route path="/promotional-banner" element={<PromotionalBanner />} />
-            <Route path="/header" element={<Header/>} />
-            <Route path="/contact" element={<Contact />} /> {/* Updated to render Contact */}
-          </Routes>
-          {/* Other components, if required on all pages */}
-          <ProjectShowcase />
-          <WhyChooseUs />
-          <PartnerBrands />
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <div className="flex flex-col min-h-screen">
+      {/* Navigation and Header */}
+      <Navigation />
+      <Header />
+      {/* Main Content */}
+      <main className="flex-grow">
+        <HeroSlider />
+        <AboutUs />
+        <Services />
+        <Gallery />
+        <PromotionalBanner/>
+        <ProjectShowcase />
+        <Blog/>
+        <WhyChooseUs />
+        <PartnerBrands />
+        <Testimonials/>
+      </main>
+      {/* Footer and Chatbot */}
+      <Footer />
+    </div>
   );
 }
+export default App;

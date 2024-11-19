@@ -25,13 +25,12 @@ export default function Navigation() {
 
   const menuItems = [
     { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
     { name: 'Projects', href: '/projects' },
     { name: 'Services', href: '/services' },
     { name: 'Gallery', href: '/gallery' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Testimonials', href: '/testimonials' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Login', href: '/login' },
+    { name: 'CHatbot', href: '/chatbot' },
   ];
 
   return (
